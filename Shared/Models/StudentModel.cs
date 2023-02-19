@@ -5,17 +5,17 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Students.Shared.Models
+namespace Shared.Models
 {
-    public class Student
+    public class StudentModelModel
     {
-        public int EmployeeId { get; set; }
+        public int StudentModelID { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
         public DateTime DateOfBrith { get; set; }
         public Gender Gender { get; set; }
-        public Department Department { get; set; }
+        public Department? Department { get; set; }
         public string? PhotoPath { get; set; }
     }
 
