@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "StudentManagement.csproj", "{837A1140-33F3-4C3D-95F3-80040BE11981}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "..\Shared\Shared.csproj", "{5CAE095B-A009-4298-AAD2-423FE3172D2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{837A1140-33F3-4C3D-95F3-80040BE11981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837A1140-33F3-4C3D-95F3-80040BE11981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837A1140-33F3-4C3D-95F3-80040BE11981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CAE095B-A009-4298-AAD2-423FE3172D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAE095B-A009-4298-AAD2-423FE3172D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAE095B-A009-4298-AAD2-423FE3172D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAE095B-A009-4298-AAD2-423FE3172D2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
