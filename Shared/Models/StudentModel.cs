@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    public class StudentModel
+    public class StudentModelModel
     {
-        public int StudentID { get; set; }
+        public int StudentModelID { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
