@@ -13,7 +13,7 @@ namespace API.Repository
             _appDbContext = appDbContext;
         }
 
-        public async Task<StudentModelModel> AddStudent(StudentModelModel student)
+        public async Task<StudentModel> AddStudent(StudentModel student)
         {
             var result = await _appDbContext.Students.AddAsync(student);
 
@@ -32,17 +32,31 @@ namespace API.Repository
             }
         }
 
-        public async Task<StudentModelModel?> GetStudent(int StudentModelModelId)
+        public async Task<StudentModel?> GetStudent(int StudentModelModelId)
         {
             return await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentModelID == StudentModelModelId);
         }
 
-        public async Task<IEnumerable<StudentModelModel>> GetStudents()
+        public async Task<StudentModel?> GetStudentByEmail(string Email)
+        {
+            var student = await _appDbContext.Students.FirstOrDefaultAsync(e => e.Email == Email);
+
+            if (student != null)
+            {
+                return student;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<IEnumerable<StudentModel>> GetStudents()
         {
             return await _appDbContext.Students.ToListAsync();
         }
 
-        public async Task<StudentModelModel?> UpdateStudent(StudentModelModel student)
+        public async Task<StudentModel?> UpdateStudent(StudentModel student)
         {
             var result = await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentModelID == student.StudentModelID);
 

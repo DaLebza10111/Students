@@ -4,10 +4,11 @@ namespace API.IRepository
 {
     public interface IStudentManagerRepository
     {
-        Task<IEnumerable<StudentModelModel>> GetStudents();
-        Task<StudentModelModel?> GetStudent(int StudentModelModelId);
-        Task<StudentModelModel> AddStudent(StudentModelModel student);
-        Task<StudentModelModel?> UpdateStudent(StudentModelModel student);
+        Task<IEnumerable<StudentModel>> GetStudents();
+        Task<StudentModel?> GetStudent(int StudentModelModelId);
+        Task<StudentModel> AddStudent(StudentModel student);
+        Task<StudentModel?> UpdateStudent(StudentModel student);
+        Task<StudentModel?> GetStudentByEmail(string Email);
         Task DeleteStudentAsync(int StudentModelModelId);
     }
 }

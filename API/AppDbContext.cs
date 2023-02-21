@@ -9,7 +9,7 @@ namespace API
         { 
 
         }
-        public DbSet<StudentModelModel> Students { get; set; }
+        public DbSet<StudentModel> Students { get; set; }
         public DbSet<Department> Departments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,7 +28,7 @@ namespace API
 
 
             // Seed Employee Table
-            modelBuilder.Entity<StudentModelModel>().HasData(new StudentModelModel
+            modelBuilder.Entity<StudentModel>().HasData(new StudentModel
             {
                 StudentModelID = 1,
                 FirstName = "John",
@@ -40,7 +40,7 @@ namespace API
                 PhotoPath = "images/john.png"
             });
 
-            modelBuilder.Entity<StudentModelModel>().HasData(new StudentModelModel
+            modelBuilder.Entity<StudentModel>().HasData(new StudentModel
             {
                 StudentModelID = 2,
                 FirstName = "Sam",
@@ -52,7 +52,7 @@ namespace API
                 PhotoPath = "images/sam.jpg"
             });
 
-            modelBuilder.Entity<StudentModelModel>().HasData(new StudentModelModel
+            modelBuilder.Entity<StudentModel>().HasData(new StudentModel
             {
                 StudentModelID = 3,
                 FirstName = "Mary",
@@ -64,7 +64,7 @@ namespace API
                 PhotoPath = "images/mary.png"
             });
 
-            modelBuilder.Entity<StudentModelModel>().HasData(new StudentModelModel
+            modelBuilder.Entity<StudentModel>().HasData(new StudentModel
             {
                 StudentModelID = 4,
                 FirstName = "Sara",
