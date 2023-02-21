@@ -8,6 +8,7 @@ namespace API.IRepository
         Task<StudentModel?> GetStudent(int StudentModelModelId);
         Task<StudentModel> AddStudent(StudentModel student);
         Task<StudentModel?> UpdateStudent(StudentModel student);
+        Task<StudentModel?> GetStudentByEmail(string Email);
         Task DeleteStudentAsync(int StudentModelModelId);
     }
 }

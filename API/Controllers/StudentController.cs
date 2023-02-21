@@ -43,7 +43,7 @@ namespace API.Controllers
             }
         }
         [HttpPost]
-        public async Task<ActionResult<StudentModel>> RegisterNewStudent(StudentModel student)
+        public async Task<ActionResult<StudentModel>> RegisterNewStudent([FromBody]StudentModel student)
         {
             if (student != null)
             {

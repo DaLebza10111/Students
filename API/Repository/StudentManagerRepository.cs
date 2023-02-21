@@ -37,6 +37,20 @@ namespace API.Repository
             return await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentModelID == StudentModelModelId);
         }
 
+        public async Task<StudentModel?> GetStudentByEmail(string Email)
+        {
+            var student = await _appDbContext.Students.FirstOrDefaultAsync(e => e.Email == Email);
+
+            if (student != null)
+            {
+                return student;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public async Task<IEnumerable<StudentModel>> GetStudents()
         {
             return await _appDbContext.Students.ToListAsync();
