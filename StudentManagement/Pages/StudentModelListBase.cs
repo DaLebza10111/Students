@@ -5,7 +5,7 @@ namespace StudentManagement.Pages
 {
     public class StudentModelListBase : ComponentBase
     {
-        public IEnumerable<StudentModelModel>? StudentsList { get; set; }
+        public IEnumerable<StudentModel>? StudentsList { get; set; }
 
         protected override Task OnInitializedAsync()
         {
