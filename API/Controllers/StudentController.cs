@@ -29,6 +29,7 @@ namespace API.Controllers
                 return NotFound("Cannot retrieve the list of students at the moment.");
             }
         }
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<StudentModel>> GetStudentbyID(int id) {
             var student = await _studentManager.GetStudentById(id);
@@ -42,6 +43,7 @@ namespace API.Controllers
                 return NotFound($"The requested student: {id} cannot be found.");
             }
         }
+
         [HttpGet("{email:email}")]
         public async Task<ActionResult<StudentModel>> GetStudentbyEmail(string email) {
             var student = await _studentManager.GetStudentByEmail(email);
@@ -55,6 +57,7 @@ namespace API.Controllers
                 return NotFound($"The requested student: {email} cannot be found.");
             }
         }
+
         [HttpPost]
         public async Task<ActionResult<StudentModel>> RegisterNewStudent([FromBody] StudentModel student)
         {
@@ -69,6 +72,7 @@ namespace API.Controllers
                 return NotFound($"Cannot register {student?.FirstName} at the moment.");
             }
         }
+
         [HttpPut]
         public async Task<ActionResult<StudentModel?>> UpdateStudentDetails(int id, StudentModel studentModel)
         {
@@ -87,6 +91,7 @@ namespace API.Controllers
                 return BadRequest("Student ID not found!");
             }
         }
+
         [HttpDelete("{int:id}")]
         public async Task DeleteStudentById(int id)
         {
