@@ -42,5 +42,19 @@ namespace API.Controllers
                 return NotFound($"The requested student: {id} cannot be found.");
             }
         }
+        [HttpPost]
+        public async Task<ActionResult<StudentModel>> RegisterNewStudent(StudentModel student)
+        {
+            if (student != null)
+            {
+                var newstudent = await _studentManager.AddStudent(student);
+
+                return CreatedAtAction(nameof(GetStudentbyID), new {id = newstudent.StudentModelID}, newstudent);
+            }
+            else
+            {
+                return NotFound($"Cannot register {student?.FirstName} at the moment.");
+            }
+        }
     }
 }
