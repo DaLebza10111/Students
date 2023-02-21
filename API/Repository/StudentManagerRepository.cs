@@ -32,7 +32,7 @@ namespace API.Repository
             }
         }
 
-        public async Task<StudentModel?> GetStudent(int StudentModelModelId)
+        public async Task<StudentModel?> GetStudentById(int StudentModelModelId)
         {
             return await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentModelID == StudentModelModelId);
         }
