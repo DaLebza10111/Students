@@ -1,4 +1,5 @@
-﻿using Shared.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Shared.Models;
 
 namespace API.IRepository
 {

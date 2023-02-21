@@ -87,5 +87,19 @@ namespace API.Controllers
                 return BadRequest("Student ID not found!");
             }
         }
+        [HttpDelete("{int:id}")]
+        public async Task DeleteStudentById(int id)
+        {
+            var removestudent = await _studentManager.GetStudentById(id);
+
+            if (removestudent != null)
+            {
+                await _studentManager.DeleteStudentAsync(removestudent.StudentModelID);
+            }
+            else
+            {
+                NotFound($"Employee {id} not found!");
+            }
+        }
     }
 }
